@@ -114,11 +114,9 @@ a:hover{
   margin-top: 10px;
 }
 
-
-
 .socialLink{
+  color:whitesmoke;
   font-size: 1.5rem;
-  transition: .1s;
 }
 
 .facebook:hover{
@@ -128,8 +126,19 @@ a:hover{
   color:rgb(29,161,242);
 }
 .github:hover{
-  color:grey;
+  color: lightgray
 }
 .linkedin:hover{
   color:rgb(40,103,178);
+}
+
+.projects{
+  width: 50%;
+  height: 400px;
+  border: 3px whitesmoke solid;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.projectRow{
+  width:100%;
 }
