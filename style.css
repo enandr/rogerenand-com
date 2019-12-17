@@ -2,15 +2,21 @@
   margin: 0;
   padding: 0;
 }
+html{
+  scroll-behavior: smooth;
+}
+body{
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
 .container{
   height: 100vh;
   display: flex;
   flex-direction: column;
   transition: 0.5s;
-}
-
-body{
-  background-color: black;
 }
 
 .top{
@@ -53,7 +59,6 @@ a:hover{
   align-items: center;
   height:100%;
   font-size: 2rem;
-  /* transition: 0.5s; */
 }
 
 .red{
@@ -68,7 +73,6 @@ a:hover{
   padding:5px 20px;
   color: rgb(233, 42, 42);
   font-weight: bold;
-  /* transition: 0.5s; */
 }
 
 .workBtn:hover{
@@ -77,7 +81,12 @@ a:hover{
   cursor: pointer;
 }
 
-.learnMore{
-  position:relative;
 
+.workContainer{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
 }
