@@ -93,6 +93,11 @@ a:hover{
   cursor: pointer;
 }
 
+.btnSelected{
+  color: whitesmoke;
+  border-color: rgb(233, 42, 42);
+}
+
 .projects{
   height:50%;
 
