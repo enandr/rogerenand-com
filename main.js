@@ -2,7 +2,7 @@ $(document).ready(initializeApp);
 var projects = null;
 function initializeApp(){
   projects = new Projects();
-
+  projects.filterProjects('all');
 }
 
 class Projects{
@@ -53,7 +53,6 @@ class Projects{
       }
     ]
     this.setClicks();
-    this.filterProjects('all');
   }
   filterProjects(filter){
     let newUl = $('<ul>');
