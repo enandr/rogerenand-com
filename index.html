@@ -2,36 +2,54 @@
 <html>
     <head>
         <title>Roger Enand | Full Stack Web Developer</title>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/5ec0105322.js" crossorigin="anonymous"></script>
         <script src="main.js"></script>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="container">
+        <div class="container" id="homePage">
           <div class="top">
             <div class="navbar">
               <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="#homePage">Home</a></li>
                 <li>|</li>
-                <li><a href="#">Work</a></li>
+                <li><a href="#workPage">Work</a></li>
                 <li>|</li>
                 <li><a href="#">About Me</a></li>
                 <li>|</li>
                 <li><a href="#">Skills</a></li>
               </ul>
+              <ul class="socialButtons">
+                <li><a href="https://www.github.com/enandr"><i class="fab fa-github github socialLink"></i></a></li>
+                <li><a href="https://www.facebook.com/roger.enand"><i class="fab fa-facebook facebook socialLink"></i></a></li>
+                <li><a><i class="fab fa-twitter twitter socialLink"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/rogerenand/"><i class="fab fa-linkedin-in linkedin socialLink"></i></a></li>
+              </ul>
             </div>
           </div>
-          <div class="home">
+          <div class="page">
             <h1>Hello My Name Is <span class="red">Roger Enand</span></h1>
             <h2>I Am A <span class="red"> Full Stack Web Developer</span></h2>
-            <a href="#workContainer" class="workBtn">See My Work</a>
+            <a href="#workPage" class="btn workBtn">See My Work</a>
           </div>
 
         </div>
-        <div class="workContainer" id="workContainer">
-          <div class="home">
-            <h1>This Is Where My <span class="red">Work Will Be</span></h1>
-            <h2>I Am A <span class="red"> Full Stack Web Developer</span></h2>
+        <div class="workContainer" id="workPage">
+          <div class="page">
+            <h1>Projects I Have <span class="red">Created</span></h1>
+            <div class="buttons">
+              <a class="btn projectBtn">All</a>
+              <a class="btn projectBtn">React</a>
+              <a class="btn projectBtn">JavaScript</a>
+              <a class="btn projectBtn">CSS3</a>
+              <a class="btn projectBtn">HTML5</a>
+            </div>
+          </div>
+          <div class="projects">
+            <div class="projectRow">
+
+            </div>
           </div>
         </div>
     </body>
