@@ -21,6 +21,10 @@ class Projects{
       {
         name: 'Memory Match',
         link: 'https://memorymatch.rogerenand.com'
+      },
+      {
+        name: 'Wicked Sales',
+        link: 'https://wickedsales.rogerenand.com'
       }
     ]
     this.projectLinks  = this.addProjects();
