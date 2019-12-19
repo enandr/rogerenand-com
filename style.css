@@ -138,7 +138,7 @@ a:hover{
 }
 
 .projects{
-  width: 50%;
+  width: 70%;
   height: 400px;
   border: 3px whitesmoke solid;
   margin-top: 20px;
@@ -155,19 +155,21 @@ a:hover{
 
 .card{
   background-color: black;
-  color: whitesmoke;
+  color: rgb(233, 42, 42);
   height: 80%;
   width: 25%;
+  max-width: 208px;
   position: relative;
-  border: 1px red solid;
+  border: 1px whitesmoke solid;
   border-radius: 10px;
   transition: .2s;
   display: inline-block;
 }
 
 .card:hover{
+  color: whitesmoke;
   transform: scale(1.1);
-  border: 1px whitesmoke solid;
+  border-color: rgb(233, 42, 42);
   z-index: 1;
 }
 
