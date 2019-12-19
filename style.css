@@ -170,7 +170,7 @@ a:hover{
 
 .card:hover{
   color: whitesmoke;
-  transform: scale(1.5);
+  transform: scale(1.1);
   border-color: rgb(233, 42, 42);
   z-index: 1;
 }
