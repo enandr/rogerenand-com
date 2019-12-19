@@ -17,6 +17,8 @@ class Projects{
           'html5',
           'css3'
         ],
+        description:'Activity recomendation based on weather',
+        image:'sigo.png',
         gitLink:'',
         link:'https://sigo.rogerenand.com'
       },
@@ -29,6 +31,8 @@ class Projects{
           'css3',
           'react'
         ],
+        description: 'Web development ticket tracking',
+        image: 'openTicket.png',
         gitLink: 'https://github.com/enandr/open-ticket',
         link: 'https://openticket.rogerenand.com'
       },
@@ -40,6 +44,8 @@ class Projects{
           'html5',
           'css3'
         ],
+        description: 'Card matching memory game',
+        image: 'memoryMatch.png',
         gitLink: 'https://github.com/enandr/memory-match',
         link: 'https://memorymatch.rogerenand.com'
       },
@@ -52,6 +58,8 @@ class Projects{
           'css3',
           'react'
         ],
+        description: 'Demo E-Commerce Website',
+        image: '',
         gitLink: 'https://github.com/enandr/wicked-sales',
         link: 'https://wickedsales.rogerenand.com'
       },
@@ -64,6 +72,8 @@ class Projects{
           'css3',
           'react'
         ],
+        description: 'Whiteboard challenges for group practicing',
+        image: '',
         gitLink: '',
         link: ''
       }
@@ -74,7 +84,7 @@ class Projects{
     let allCards = $('<div>').addClass('projectRow').attr('id', 'projectRow');
     this.projects.map(value => {
       if (value.tags.includes(filter.toLowerCase())){
-        let newCard = this.createCard(null,value.name,null,value.link,value.gitLink);
+        let newCard = this.createCard(value.image,value.name,value.description,value.link,value.gitLink);
         allCards.append(newCard);
       }
     })
@@ -95,12 +105,24 @@ class Projects{
   }
   createCard(image,name,desc,liveLink,gitLink){
     let card = $('<div>').addClass('card');
-    let cardImage = $('<div>').addClass('cardImg').css({ 'background-image': "url('binary-code-475664_1920.jpg')" });
+    let cardImage = $('<div>').addClass('cardImg');
     let title = $('<h1>').text(name);
-    let description = $('<p>').text('Description Goes Here');
+    let description = $('<p>');
     let btnContainer = $('<div>').addClass('cardBtnContainer');
     let liveBtn = $('<a>').text('Live').addClass('btn cardBtn');
     let gitBtn = $('<a>').text('Github').addClass('btn cardBtn');
+    if (desc){
+      description.text(desc);
+    }
+    else{
+      description.text('Description Goes Here');
+    }
+    if (image){
+      cardImage.css({ 'background-image': `url(${image})` });
+    }
+    else{
+      cardImage.css({ 'background-image': "url('binary-code-475664_1920.jpg')" });
+    }
     if (liveLink) {
       liveBtn.attr('href', liveLink);
     }
