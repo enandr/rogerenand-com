@@ -244,6 +244,7 @@ a:hover{
 }
 .skill:hover{
   transform: scale(1.1) rotateZ(-10deg);
+  color: whitesmoke;
 }
 .skillSection{
   display: flex;
@@ -254,4 +255,5 @@ a:hover{
 }
 .skillRev:hover{
   transform: scale(1.1) rotateZ(10deg);
+  color: whitesmoke;
 }
