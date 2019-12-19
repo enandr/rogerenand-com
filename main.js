@@ -78,7 +78,7 @@ class Projects{
         link: ''
       }
     ]
-    this.setClicks();
+    this.setEvents();
   }
   filterProjects(filter){
     let allCards = $('<div>').addClass('projectRow').attr('id', 'projectRow');
@@ -91,13 +91,23 @@ class Projects{
     this.show(allCards);
 
   }
-  setClicks(){
+  setEvents(){
     $('.projectBtn').on('click',() => {
       let clickedButton = $(event.target)
       $('.projectBtn').removeClass('btnSelected');
       clickedButton.addClass('btnSelected');
       this.filterProjects(clickedButton.text());
     });
+/*     $('.projects').on('mousemove','.cardImg', (event) => {
+      event.target.style.backgroundPositionX = -event.offsetX + "px";
+      event.target.style.backgroundPositionY = -event.offsetY + "px";
+      event.target.style.backgroundSize = '100%';
+    });
+    $('.projects').on('mouseout', '.cardImg', (event) => {
+      event.target.style.backgroundPositionX = 'center';
+      event.target.style.backgroundPositionY = 'center';
+      event.target.style.backgroundSize = 'contain';
+    }); */
   }
   show(list){
     $('.projects *').remove();
@@ -105,6 +115,7 @@ class Projects{
   }
   createCard(image,name,desc,liveLink,gitLink){
     let card = $('<div>').addClass('card');
+    let cardImageDiv = $('<div>').addClass('cardImgDiv');
     let cardImage = $('<div>').addClass('cardImg');
     let title = $('<h1>').text(name);
     let description = $('<p>');
@@ -136,7 +147,8 @@ class Projects{
       gitBtn.addClass('noHover');
     }
     btnContainer.append(liveBtn, gitBtn);
-    card.append(cardImage, title, description, btnContainer);
+    cardImageDiv.append(cardImage);
+    card.append(cardImageDiv, title, description, btnContainer);
     return card;
   }
 }
