@@ -11,6 +11,7 @@ body{
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  font-family: 'Montserrat', sans-serif;
 }
 .container{
   min-height: 100vh;
@@ -122,7 +123,7 @@ a:hover{
 
 .socialLink{
   color:whitesmoke;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .facebook:hover{
@@ -132,7 +133,7 @@ a:hover{
   color:rgb(29,161,242);
 }
 .github:hover{
-  color: lightgray
+  color: gray
 }
 .linkedin:hover{
   color:rgb(40,103,178);
@@ -196,9 +197,10 @@ a:hover{
   transform:scale(.85);
 }
 .pageText{
-  width: 80%;
+  width: 70%;
   text-align: center;
   margin-top: 20px;
+  font-size: 1.5rem;
 }
 .nextPageBtn{
   position: absolute;
