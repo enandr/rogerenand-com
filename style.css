@@ -198,7 +198,7 @@ a:hover{
 }
 .pageText{
   width: 70%;
-  text-align: center;
+  text-align: left;
   margin-top: 20px;
   font-size: 1.5rem;
 }
@@ -206,4 +206,8 @@ a:hover{
   position: absolute;
   bottom:0;
   height: fit-content;
+}
+.noHover{
+    pointer-events: none;
+    opacity: .5;
 }

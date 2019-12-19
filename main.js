@@ -104,8 +104,14 @@ class Projects{
     if (liveLink) {
       liveBtn.attr('href', liveLink);
     }
+    else{
+      liveBtn.addClass('noHover');
+    }
     if (gitLink) {
       gitBtn.attr('href', gitLink);
+    }
+    else {
+      gitBtn.addClass('noHover');
     }
     btnContainer.append(liveBtn, gitBtn);
     card.append(cardImage, title, description, btnContainer);
