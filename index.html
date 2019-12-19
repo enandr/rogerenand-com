@@ -5,10 +5,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/5ec0105322.js" crossorigin="anonymous"></script>
         <script src="main.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="container" id="homePage">
           <div class="top">
             <div class="navbar">
               <ul>
@@ -16,9 +16,11 @@
                 <li>|</li>
                 <li><a href="#workPage">Work</a></li>
                 <li>|</li>
-                <li><a href="#">About Me</a></li>
+                <li><a href="#aboutMePage">About Me</a></li>
                 <li>|</li>
-                <li><a href="#">Skills</a></li>
+                <li><a href="#skillsPage">Skills</a></li>
+                <li>|</li>
+                <li><a href="#">Contact Me</a></li>
                 <li>|</li>
                 <li><a href="#">Resume</a></li>
               </ul>
@@ -30,12 +32,15 @@
               </ul>
             </div>
           </div>
+        <div class="container" id="homePage">
           <div class="page">
             <h1>Hello My Name Is <span class="red">Roger Enand</span></h1>
             <h2>I Am A <span class="red"> Full Stack Web Developer</span></h2>
+
+          </div>
+          <div class="page nextPageBtn">
             <a href="#workPage" class="btn workBtn">See My Work</a>
           </div>
-
         </div>
         <div class="workContainer" id="workPage">
           <div class="page">
@@ -46,9 +51,32 @@
               <a class="btn projectBtn" id="cssBtn">CSS3</a>
               <a class="btn projectBtn" id="htmlBtn">HTML5</a>
             </div>
+
           </div>
           <div class="projects">
 
+          </div>
+          <div class="page nextPageBtn">
+            <a href="#aboutMePage" class="btn workBtn">Learn About Me</a>
+          </div>
+
+        </div>
+        <div class="container" id="aboutMePage">
+          <div class="page">
+            <h1>What Is My <span class="red">Developer Story</span></h1>
+            <p class="pageText">I was first introduced to coding at a young age, middle school. I participated and led a lego robotics competitive team. It was there that I learned the basics of programming. Moving ahead to high school, I took a Web Development class focused on <span class="red">HTML</span> and<span class="red"> CSS</span>. In that class I discovered my love for programming. <br> <br> Through the years I have built several personal Websites and Apps as a hobby. As I discovered new technologies, or fun ideas, I taught myself what I needed to know and built a new project or continued a project trying to improve it using the newly gained knowledge. <br> <br> Recently I went to an intensive Web Development Program to push my knowledge forward in <span class="red">HTML</span>, <span class="red">CSS</span>, <span class="red">JavaScript</span>, <span class="red">NODE</span>, <span class="red">React</span>, <span class="red">MySql</span>, and <span class="red">PHP</span>.</p>
+          </div>
+          <div class="page nextPageBtn">
+            <a href="#skillsPage" class="btn workBtn">See My Skills</a>
+          </div>
+        </div>
+        <div class="container" id="skillsPage">
+          <div class="page">
+            <h1>What Are My <span class="red">Development Skills</span></h1>
+            <p class="pageText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae molestiae aut, perspiciatis, eius possimus qui quo sint consectetur sequi enim officia unde mollitia consequatur porro, corporis blanditiis. Id nulla exercitationem sit aliquam neque tempore ab quo officia atque autem, fugit harum libero laudantium et aut? Libero quis ipsam rerum eum.</p>
+          </div>
+          <div class="page nextPageBtn">
+            <a href="#" class="btn workBtn">Contact Me</a>
           </div>
         </div>
     </body>

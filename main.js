@@ -74,22 +74,8 @@ class Projects{
     let allCards = $('<div>').addClass('projectRow').attr('id', 'projectRow');
     this.projects.map(value => {
       if (value.tags.includes(filter.toLowerCase())){
-        let card = $('<div>').addClass('card');
-        let cardImage = $('<div>').addClass('cardImg').css({ 'background-image':"url('binary-code-475664_1920.jpg')"});
-        let title = $('<h1>').text(value.name);
-        let description = $('<p>').text('Description Goes Here');
-        let btnContainer = $('<div>').addClass('cardBtnContainer');
-        let liveBtn = $('<a>').text('Live').addClass('btn cardBtn');
-        let gitBtn = $('<a>').text('Github').addClass('btn cardBtn');
-        if (value.link){
-          liveBtn.attr('href', value.link);
-        }
-        if (value.gitLink) {
-          gitBtn.attr('href', value.gitLink);
-        }
-        btnContainer.append(liveBtn, gitBtn);
-        card.append(cardImage, title, description, btnContainer);
-        allCards.append(card);
+        let newCard = this.createCard(null,value.name,null,value.link,value.gitLink);
+        allCards.append(newCard);
       }
     })
     this.show(allCards);
@@ -106,5 +92,29 @@ class Projects{
   show(list){
     $('.projects *').remove();
     $('.projects').append(list);
+  }
+  createCard(image,name,desc,liveLink,gitLink){
+    let card = $('<div>').addClass('card');
+    let cardImage = $('<div>').addClass('cardImg').css({ 'background-image': "url('binary-code-475664_1920.jpg')" });
+    let title = $('<h1>').text(name);
+    let description = $('<p>').text('Description Goes Here');
+    let btnContainer = $('<div>').addClass('cardBtnContainer');
+    let liveBtn = $('<a>').text('Live').addClass('btn cardBtn');
+    let gitBtn = $('<a>').text('Github').addClass('btn cardBtn');
+    if (liveLink) {
+      liveBtn.attr('href', liveLink);
+    }
+    else{
+      liveBtn.addClass('noHover');
+    }
+    if (gitLink) {
+      gitBtn.attr('href', gitLink);
+    }
+    else {
+      gitBtn.addClass('noHover');
+    }
+    btnContainer.append(liveBtn, gitBtn);
+    card.append(cardImage, title, description, btnContainer);
+    return card;
   }
 }

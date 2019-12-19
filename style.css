@@ -11,12 +11,16 @@ body{
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  font-family: 'Montserrat', sans-serif;
 }
 .container{
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   transition: 0.5s;
+  position: relative;
 }
 
 .top{
@@ -24,8 +28,9 @@ body{
   flex-direction: row;
   width: 100%;
   height: fit-content;
-/*   background-color: rgb(0, 0, 0);
-  box-shadow: 1px 1px 80px rgb(0, 0, 0); */
+  z-index: 2;
+  background-color: black;
+  box-shadow: 0 0 20px black;
 }
 
 ul{
@@ -42,7 +47,6 @@ ul{
 a{
   color: whitesmoke;
   text-decoration: none;
-  transition: 0.2s;
 }
 
 li{
@@ -50,6 +54,7 @@ li{
   color: whitesmoke;
   padding-left: 10px;
   cursor: pointer;
+  transition: 0.2s;
 
 }
 
@@ -64,6 +69,7 @@ a:hover{
   justify-content: center;
   align-items: center;
   height:100%;
+  width:100%;
   font-size: 2rem;
 }
 
@@ -81,6 +87,7 @@ a:hover{
   padding:5px 20px;
   color: rgb(233, 42, 42);
   font-weight: bold;
+  transition: 0.2s;
 }
 
 .projectBtn{
@@ -98,18 +105,13 @@ a:hover{
   border-color: rgb(233, 42, 42);
 }
 
-.projects{
-  height:50%;
-
-}
-
 .workContainer{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  position: relative;
 }
 
 .buttons{
@@ -121,7 +123,7 @@ a:hover{
 
 .socialLink{
   color:whitesmoke;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .facebook:hover{
@@ -131,7 +133,7 @@ a:hover{
   color:rgb(29,161,242);
 }
 .github:hover{
-  color: lightgray
+  color: gray
 }
 .linkedin:hover{
   color:rgb(40,103,178);
@@ -140,7 +142,6 @@ a:hover{
 .projects{
   width: 70%;
   height: 400px;
-  border: 3px whitesmoke solid;
   margin-top: 20px;
   border-radius: 10px;
   display: flex;
@@ -194,4 +195,19 @@ a:hover{
 }
 .cardBtn{
   transform:scale(.85);
+}
+.pageText{
+  width: 70%;
+  text-align: left;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+.nextPageBtn{
+  position: absolute;
+  bottom:0;
+  height: fit-content;
+}
+.noHover{
+    pointer-events: none;
+    opacity: .5;
 }
