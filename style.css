@@ -47,6 +47,7 @@ ul{
 a{
   color: whitesmoke;
   text-decoration: none;
+  transition: color .2s;
 }
 
 li{
