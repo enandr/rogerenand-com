@@ -157,7 +157,7 @@ a:hover{
 .card{
   background-color: black;
   color: rgb(233, 42, 42);
-  height: 80%;
+  height: 90%;
   width: 25%;
   max-width: 208px;
   position: relative;
@@ -169,7 +169,7 @@ a:hover{
 
 .card:hover{
   color: whitesmoke;
-  transform: scale(1.1);
+  transform: scale(1.5);
   border-color: rgb(233, 42, 42);
   z-index: 1;
 }
@@ -178,8 +178,9 @@ a:hover{
   height: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   border-radius: 10px 10px 0 0;
+  background-color: rgb(14, 14, 14);
 }
 
 .cardBtnContainer{
