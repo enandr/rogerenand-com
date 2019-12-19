@@ -50,7 +50,7 @@ class Projects{
         link: 'https://memorymatch.rogerenand.com'
       },
       {
-        name: 'Wicked Sales',
+        name: 'Lightning Sales',
         tags: [
           'all',
           'javascript',
@@ -58,8 +58,8 @@ class Projects{
           'css3',
           'react'
         ],
-        description: 'Demo E-Commerce Website',
-        image: '',
+        description: 'Speed Sales E-Commerce Demo',
+        image: 'lightningSales.png',
         gitLink: 'https://github.com/enandr/wicked-sales',
         link: 'https://wickedsales.rogerenand.com'
       },
