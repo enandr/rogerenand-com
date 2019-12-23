@@ -18,7 +18,7 @@ class Projects{
           'css3'
         ],
         description:'Activity recomendation based on weather',
-        image:'sigo.png',
+        image:'../images/sigo.png',
         gitLink:'',
         link:'https://sigo.rogerenand.com'
       },
@@ -32,7 +32,7 @@ class Projects{
           'react'
         ],
         description: 'Web development ticket tracking',
-        image: 'openTicket.png',
+        image: '../images/openTicket.png',
         gitLink: 'https://github.com/enandr/open-ticket',
         link: 'https://openticket.rogerenand.com'
       },
@@ -45,7 +45,7 @@ class Projects{
           'css3'
         ],
         description: 'Card matching memory game',
-        image: 'memoryMatch.png',
+        image: '../images/memoryMatch.png',
         gitLink: 'https://github.com/enandr/memory-match',
         link: 'https://memorymatch.rogerenand.com'
       },
@@ -59,7 +59,7 @@ class Projects{
           'react'
         ],
         description: 'Speed Sales E-Commerce Demo',
-        image: 'lightningSales.png',
+        image: '../images/lightningSales.png',
         gitLink: 'https://github.com/enandr/wicked-sales',
         link: 'https://wickedsales.rogerenand.com'
       },
