@@ -1,0 +1,40 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+.myBtn{
+  border-radius: 10px;
+  border: 3px white solid;
+  padding:5px 20px;
+  color: red;
+  font-weight: bold;
+  transition: 0.2s;
+  margin:50px;
+  font-size: 2rem;
+}
+.myBtn:hover{
+  color: white;
+  border-color: red;
+  cursor: pointer;
+}
+.facebook:hover{
+  color:rgb(66,103,178);
+}
+.twitter:hover{
+  color:rgb(29,161,242);
+}
+.github:hover{
+  color: gray
+}
+.linkedin:hover{
+  color:rgb(40,103,178);
+}
+.text-hover{
+  transition: 0.2s;
+}
+.text-hover:hover{
+  color: red !important;
+  cursor: pointer;
+}
+.clickable{
+  cursor: pointer;
+}
