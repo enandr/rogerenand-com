@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Roger Site V2</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -11,8 +12,9 @@
     </head>
     <body class="black">
       <!-- Navbar And Mobile NavBar -->
-      <div class="navbar-fixed">
-        <nav class="black">
+      <header class="">
+        <div class="navbar-fixed">
+          <nav class="black">
             <div class="nav-wrapper">
               <a href="#" data-target="mobile-nav" class="sidenav-trigger white-text">
                 <i class="material-icons">menu</i>
@@ -25,24 +27,29 @@
                 <li><a class="text-hover" href="#contact">Contact Me</a></li>
                 <li><a class="text-hover" href="#">Resume</a></li>
               </ul>
-              <ul class="right">
+              <ul class="right hide-on-med-and-down">
                 <li><a href="https://www.github.com/enandr"><i class="fab fa-github github fa-2x"></i></a></li>
                 <li><a href="https://www.facebook.com/roger.enand"><i class="fab fa-facebook facebook fa-2x"></i></a></li>
                 <li><a><i class="fab fa-twitter twitter fa-2x"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/rogerenand/"><i class="fab fa-linkedin-in linkedin fa-2x"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/rogerenand/"><i class="fab fa-linkedin-in linkedin fa-2x"></i></a>
+                </li>
               </ul>
             </div>
-        </nav>
-      </div>
-      <ul class="sidenav black navText" id="mobile-nav">
-        <li><a class="white-text" href="#home">Home</a></li>
-        <li><a class="white-text" href="#work">Work</a></li>
-        <li><a class="white-text" href="#about">About Me</a></li>
-        <li><a class="white-text" href="#skills">Skills</a></li>
-        <li><a class="white-text" href="#contact">Contact Me</a></li>
-        <li><a class="white-text" href="#">Resume</a></li>
-      </ul>
+          </nav>
+        </div>
+        <ul class="sidenav black navText" id="mobile-nav">
+          <li><a class="white-text navText" href="#home">Home</a></li>
+          <li><a class="white-text navText" href="#work">Work</a></li>
+          <li><a class="white-text navText" href="#about">About Me</a></li>
+          <li><a class="white-text navText" href="#skills">Skills</a></li>
+          <li><a class="white-text navText" href="#contact">Contact Me</a></li>
+          <li><a class="white-text navText" href="#">Resume</a></li>
+        </ul>
+      </header>
+
       <!-- Home Slider-->
+  <div class="row">
+    <div class="col s12">
       <div class="slider center">
         <ul class="slides black">
           <li>
@@ -60,6 +67,9 @@
           </li>
         </ul>
       </div>
+    </div>
+  </div>
+
       <section class="section" id="work">
         <!-- <div class="container">
           <div class="row">
