@@ -86,7 +86,7 @@ function makeCards(){
   let wholeContainer = $('<div>').addClass('container');
   let allCards = $('<div>').addClass('row');
   projects.map(value => {
-    let col = $('<div>').addClass('col s12 m12 l6');
+    let col = $('<div>').addClass('col s12 m12 l6 flow-text');
     let card = $('<div>').addClass('card large grey darken-4');
 
     let cardImage = $('<div>').addClass('card-image');
@@ -107,7 +107,7 @@ function makeCards(){
     revealTitle.append(revealIcon)
     reveal.append(revealTitle,revealP)
     value.tags.map(value => {
-      let newChip = $('<div>').addClass('chip grey darken-3 red-text').text(value);
+      let newChip = $('<div>').addClass('chip grey darken-3 red-text flow-text').text(value);
       reveal.append(newChip);
     })
     card.append(cardImage,content,reveal)
