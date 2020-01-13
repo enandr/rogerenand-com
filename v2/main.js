@@ -20,7 +20,6 @@ function makeCards(){
       {
         name: 'SI/GO',
         tags: [
-          'all',
           'javascript',
           'html5',
           'css3'
@@ -33,7 +32,6 @@ function makeCards(){
       {
         name: 'Open Ticket',
         tags: [
-          'all',
           'javascript',
           'html5',
           'css3',
@@ -47,7 +45,6 @@ function makeCards(){
       {
         name: 'Memory Match',
         tags: [
-          'all',
           'javascript',
           'html5',
           'css3'
@@ -60,7 +57,6 @@ function makeCards(){
       {
         name: 'Lightning Sales',
         tags: [
-          'all',
           'javascript',
           'html5',
           'css3',
@@ -74,7 +70,6 @@ function makeCards(){
       {
         name: 'Whiteboard Wizards',
         tags: [
-          'all',
           'javascript',
           'html5',
           'css3',
@@ -123,7 +118,7 @@ function makeCards(){
     revealTitle.append(revealIcon)
     reveal.append(revealTitle,revealP)
     value.tags.map(value => {
-      let newChip = $('<div>').addClass('chip grey darken-3 red-text flow-text').text(value);
+      let newChip = $('<div>').addClass('chip grey darken-3 red-text flow-text').text(value.toUpperCase());
       reveal.append(newChip);
     })
     card.append(cardImage,content,action,reveal)
