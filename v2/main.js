@@ -11,6 +11,7 @@ M.Slider.init(slider,{
 })
 const modal1 = document.querySelector('.modal');
 M.Modal.init(modal1, {
+  dismissible: false
 })
 const scrollspy = document.querySelectorAll('.scrollspy');
 M.ScrollSpy.init(scrollspy, {
