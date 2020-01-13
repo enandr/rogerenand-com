@@ -9,6 +9,9 @@ M.Slider.init(slider,{
   indicators:false,
   interval:3000
 })
+const modal1 = document.querySelector('.modal');
+M.Modal.init(modal1, {
+})
 makeCards();
 function makeCards(){
   const location = $('#work');
@@ -86,7 +89,7 @@ function makeCards(){
   let wholeContainer = $('<div>').addClass('container');
   let allCards = $('<div>').addClass('row');
   projects.map(value => {
-    let col = $('<div>').addClass('col s12 m12 l6 flow-text');
+    let col = $('<div>').addClass('col s12 m6 l4 flow-text');
     let card = $('<div>').addClass('card large grey darken-4');
 
     let cardImage = $('<div>').addClass('card-image');
@@ -99,7 +102,20 @@ function makeCards(){
     let frontLink = $('<a>').addClass('activator center clickable white-text text-hover').text('Click To Learn More');
     frontTitle.append(frontIcon);
     content.append(frontTitle,frontLink);
-
+    let action = $('<div>').addClass('card-action grey darken-4');
+    if (value.gitLink){
+      var actionLinkGit = $('<a>').addClass('center clickable white-text text-hover').text('GitHub').attr('href', value.gitLink);
+    }
+    else {
+      actionLinkGit = null;
+    }
+    if (value.link) {
+      var actionLinkLive = $('<a>').addClass('center clickable white-text text-hover').text('Live').attr('href', value.link);
+    }
+    else {
+      actionLinkLive = $('<a>').addClass('center clickable white-text text-hover').text('Under Construction')
+    }
+    action.append(actionLinkLive,actionLinkGit);
     let reveal = $('<div>').addClass('card-reveal grey darken-4');
     let revealTitle = $('<span>').addClass('card-title red-text').text(value.name);
     let revealIcon = $('<i>').addClass('material-icons right').text('close');
@@ -110,7 +126,7 @@ function makeCards(){
       let newChip = $('<div>').addClass('chip grey darken-3 red-text flow-text').text(value);
       reveal.append(newChip);
     })
-    card.append(cardImage,content,reveal)
+    card.append(cardImage,content,action,reveal)
     col.append(card);
     allCards.append(col);
   })

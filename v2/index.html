@@ -1,53 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Roger Site V2</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <script src="https://kit.fontawesome.com/5ec0105322.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Alatsi|Montserrat&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body class="black">
-      <!-- Navbar And Mobile NavBar -->
-      <header class="">
-        <div class="navbar-fixed">
-          <nav class="black">
-            <div class="nav-wrapper">
-              <a href="#" data-target="mobile-nav" class="sidenav-trigger white-text">
-                <i class="material-icons">menu</i>
-              </a>
-              <ul class="left hide-on-med-and-down">
-                <li><a class="text-hover" href="#home">Home</a></li>
-                <li><a class="text-hover" href="#work">Work</a></li>
-                <li><a class="text-hover" href="#about">About Me</a></li>
-                <li><a class="text-hover" href="#skills">Skills</a></li>
-                <li><a class="text-hover" href="#contact">Contact Me</a></li>
-                <li><a class="text-hover" href="#">Resume</a></li>
-              </ul>
-              <ul class="right hide-on-med-and-down">
-                <li><a href="https://www.github.com/enandr"><i class="fab fa-github github fa-2x"></i></a></li>
-                <li><a href="https://www.facebook.com/roger.enand"><i class="fab fa-facebook facebook fa-2x"></i></a></li>
-                <li><a><i class="fab fa-twitter twitter fa-2x"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/rogerenand/"><i class="fab fa-linkedin-in linkedin fa-2x"></i></a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-        <ul class="sidenav black navText" id="mobile-nav">
-          <li><a class="white-text navText" href="#home">Home</a></li>
-          <li><a class="white-text navText" href="#work">Work</a></li>
-          <li><a class="white-text navText" href="#about">About Me</a></li>
-          <li><a class="white-text navText" href="#skills">Skills</a></li>
-          <li><a class="white-text navText" href="#contact">Contact Me</a></li>
-          <li><a class="white-text navText" href="#">Resume</a></li>
-        </ul>
-      </header>
 
-      <!-- Home Slider-->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roger Site V2</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://kit.fontawesome.com/5ec0105322.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alatsi|Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="black">
+  <!-- Navbar And Mobile NavBar -->
+  <header class="">
+    <div class="navbar-fixed">
+      <nav class="black">
+        <div class="nav-wrapper">
+          <a href="#" data-target="mobile-nav" class="sidenav-trigger white-text">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="left hide-on-med-and-down">
+            <li><a class="text-hover" href="#home">Home</a></li>
+            <li><a class="text-hover" href="#work">Work</a></li>
+            <li><a class="text-hover" href="#about">About Me</a></li>
+            <li><a class="text-hover" href="#skills">Skills</a></li>
+            <li><a data-target="modal1" class="text-hover modal-trigger">Contact Me</a></li>
+            <li><a class="text-hover" href="#">Resume</a></li>
+          </ul>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="https://www.github.com/enandr"><i class="fab fa-github github fa-2x"></i></a></li>
+            <li><a href="https://www.facebook.com/roger.enand"><i class="fab fa-facebook facebook fa-2x"></i></a></li>
+            <li><a><i class="fab fa-twitter twitter fa-2x"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/rogerenand/"><i class="fab fa-linkedin-in linkedin fa-2x"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <ul class="sidenav black navText" id="mobile-nav">
+      <li><a class="white-text navText" href="#home">Home</a></li>
+      <li><a class="white-text navText" href="#work">Work</a></li>
+      <li><a class="white-text navText" href="#about">About Me</a></li>
+      <li><a class="white-text navText" href="#skills">Skills</a></li>
+      <li><a class="white-text navText" href="#contact">Contact Me</a></li>
+      <li><a class="white-text navText" href="#">Resume</a></li>
+    </ul>
+  </header>
+
+  <!-- Home Slider-->
   <div class="row">
     <div class="col s12">
       <div class="slider center">
@@ -70,53 +72,134 @@
     </div>
   </div>
 
-      <section class="section" id="work">
-        <!-- <div class="container">
-          <div class="row">
-            <div class="col s12 m12 l6">
-              <div class="card small grey darken-4">
-                <div class="card-image">
-                  <img class="activator clickable" src="../binary-code-475664_1920.jpg" alt="">
-                </div>
-                <div class="card-content grey darken-4">
-                  <span class="card-title activator white-text">Project Title<i class="material-icons right">more_vert</i></span>
-                  <a class="activator center clickable white-text text-hover">Click To Learn More</a>
-                </div>
-                <div class="card-reveal grey darken-4">
-                  <span class="card-title red-text">Project Title<i class="material-icons right">close</i></span>
-                  <p class="red-text">Here is some more information about the project.</p>
-                  <div class="chip grey darken-3 red-text">React</div>
-                  <div class="chip grey darken-3 red-text">JS</div>
-                  <div class="chip grey darken-3 red-text">Bootstrap</div>
-                  <div class="chip grey darken-3 red-text">Materialize</div>
-                </div>
-              </div>
+  <section class="section" id="work">
+  </section>
+  <section class="section" id="about">
+    <div class="container">
+      <h1 class="white-text center">What Is My <span class="red-text">Developer Story</span></h1>
+      <p class="white-text flow-text">I was first introduced to coding at a young age, middle school. I participated in
+        and led a lego robotics competitive team. It was there that I learned the basics of programming. Moving ahead to
+        high school, I took a Web Development class focused on <span class="red-text">HTML</span> and<span
+          class="red-text"> CSS</span>. In that class I discovered my love for programming. <br> <br> Through the years
+        I have built several personal Websites and Apps as a hobby. As I discovered new technologies, or fun ideas, I
+        taught myself what I needed to know and built a new project or continued a project trying to improve it using
+        the newly gained knowledge. <br> <br> Recently I went to an intensive Web Development Program called Learning
+        Fuze to push my knowledge forward in <span class="red-text">HTML</span>, <span class="red-text">CSS</span>,
+        <span class="red-text">JavaScript</span>, <span class="red-text">NODE</span>, <span
+          class="red-text">React</span>, <span class="red-text">MySql</span>, and <span class="red-text">PHP</span>.</p>
+    </div>
 
-            </div>
-            <div class="col s12 m12 l6">
-              <div class="card small grey darken-4">
-                <div class="card-image">
-                  <img class="activator clickable" src="../binary-code-475664_1920.jpg" alt="">
-                </div>
-                <div class="card-content grey darken-4">
-                  <span class="card-title activator white-text">Project Title<i class="material-icons right">more_vert</i></span>
-                  <a class="activator center clickable white-text text-hover">Click To Learn More</a>
-                </div>
-                <div class="card-reveal grey darken-4">
-                  <span class="card-title red-text">Project Title<i class="material-icons right">close</i></span>
-                  <p class="red-text">Here is some more information about the project.</p>
-                  <div class="chip grey darken-3 red-text">React</div>
-                  <div class="chip grey darken-3 red-text">JS</div>
-                  <div class="chip grey darken-3 red-text">Bootstrap</div>
-                  <div class="chip grey darken-3 red-text">Materialize</div>
-                </div>
-              </div>
-
-            </div>
+  </section>
+  <section class="section" id="skills">
+    <div class="container">
+      <h1 class="white-text center">What Are My <span class="red-text">Skills</span></h1>
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card-panel transparent center">
+            <span class="white-text">
+              <h5 class="red-text">HTML</h5>
+              <p>
+                HTML, The building essentials of all WebSites
+              </p>
+            </span>
           </div>
-        </div> -->
-      </section>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script src="main.js"></script>
-    </body>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel transparent center">
+            <span class="white-text">
+              <h5 class="red-text">CSS</h5>
+              <p>
+                CSS, The look and feel of the Web
+              </p>
+            </span>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel transparent center">
+            <span class="white-text">
+              <h5 class="red-text">JAVASCRIPT</h5>
+              <p>
+                JavaScript, How the web works and operates
+              </p>
+            </span>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel transparent center">
+            <span class="white-text">
+              <h5 class="red-text">REACT</h5>
+              <p>
+                REACT, A great to build an ever changing Website
+              </p>
+            </span>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel transparent center">
+            <span class="white-text">
+              <h5 class="red-text">BOOTSTRAP</h5>
+              <p>
+                BOOTSTRAP, A CSS framework from twitter designed for rapid Development
+              </p>
+            </span>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel transparent center">
+            <span class="white-text">
+              <h5 class="red-text">MATERIALIZE</h5>
+              <p>
+                MATERIALIZE, A CSS framework from google designed for rapid Development
+              </p>
+            </span>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel transparent center">
+            <span class="white-text">
+              <h5 class="red-text">PHP</h5>
+              <p>
+                PHP, The backbone of a website for interaction with a backend server
+              </p>
+            </span>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel transparent center">
+            <span class="white-text">
+              <h5 class="red-text">MYSQL</h5>
+              <p>
+                MYSQL, The backend Database to hold and organize Informaition
+              </p>
+            </span>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel transparent center">
+            <span class="white-text">
+              <h5 class="red-text">GIT</h5>
+              <p>
+                GIT, Version control to easily navigate through your project
+              </p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content grey darken-4 white-text">
+      <h4>Contact Me</h4>
+      <p>Contact Informaition</p>
+    </div>
+    <div class="modal-footer grey darken-4">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat white-text">Cancel</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat white-text">Send</a>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
