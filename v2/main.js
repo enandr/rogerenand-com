@@ -12,6 +12,9 @@ M.Slider.init(slider,{
 const modal1 = document.querySelector('.modal');
 M.Modal.init(modal1, {
 })
+const scrollspy = document.querySelectorAll('.scrollspy');
+M.ScrollSpy.init(scrollspy, {
+})
 makeCards();
 function makeCards(){
   const location = $('#work');
