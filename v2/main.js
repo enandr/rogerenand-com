@@ -11,11 +11,18 @@ M.Slider.init(slider,{
 })
 const modal1 = document.querySelector('.modal');
 M.Modal.init(modal1, {
-  dismissible: false
 })
 const scrollspy = document.querySelectorAll('.scrollspy');
 M.ScrollSpy.init(scrollspy, {
 })
+/* $(window).scroll(() => {
+  if ($(window).scrollTop()>$(window).height()){
+    $('#navBar').removeClass('navbar-fixed');
+  }
+  else {
+    $('#navBar').addClass('navbar-fixed');
+  }
+}) */
 makeCards();
 function makeCards(){
   const location = $('#work');
@@ -132,3 +139,12 @@ function makeCards(){
   wholeContainer.append(allCards);
   location.append(wholeContainer);
 }
+/* function makeSkills(){
+  const skills = {
+    title:"JavaScript",
+    image:"images/javascript-736400.png"
+  }
+  skills.map(() => {
+
+  })
+} */

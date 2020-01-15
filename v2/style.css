@@ -38,3 +38,7 @@ body{
 .clickable{
   cursor: pointer;
 }
+.skillsImage{
+  height: 200px;
+  width: 200px;
+}
