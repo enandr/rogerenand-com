@@ -96,7 +96,7 @@ function makeCards(){
   let allCards = $('<div>').addClass('row');
   projects.map(value => {
     let col = $('<div>').addClass('col s12 m6 l4 flow-text');
-    let card = $('<div>').addClass('card large grey darken-4');
+    let card = $('<div>').addClass('card large grey darken-4 sticky-action');
 
     let cardImage = $('<div>').addClass('card-image');
     let image = $('<img>').addClass('activator clickable').attr('src',value.image);
