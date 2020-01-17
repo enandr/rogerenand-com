@@ -24,6 +24,7 @@ $(window).scroll(() => {
   }
 })
 makeCards();
+makeSkills();
 function makeCards(){
   const location = $('#work');
   const projects =
@@ -119,17 +120,18 @@ function makeCards(){
       var actionLinkLive = $('<a>').addClass('center clickable white-text text-hover').text('Live').attr('href', value.link);
     }
     else {
-      actionLinkLive = $('<a>').addClass('center clickable white-text text-hover').text('Under Construction')
+      actionLinkLive = null;
+      // actionLinkLive = $('<a>').addClass('center clickable white-text text-hover').text('Under Construction')
     }
     action.append(actionLinkLive,actionLinkGit);
     let reveal = $('<div>').addClass('card-reveal grey darken-4');
-    let revealTitle = $('<span>').addClass('card-title red-text').text(value.name);
+    let revealTitle = $('<span>').addClass('card-title white-text').text(value.name);
     let revealIcon = $('<i>').addClass('material-icons right').text('close');
-    let revealP = $('<p>').addClass('red-text').text(value.description);
+    let revealP = $('<p>').addClass('white-text').text(value.description);
     revealTitle.append(revealIcon)
     reveal.append(revealTitle,revealP)
     value.tags.map(value => {
-      let newChip = $('<div>').addClass('chip grey darken-3 red-text flow-text').text(value.toUpperCase());
+      let newChip = $('<div>').addClass('chip grey darken-3 white-text flow-text').text(value.toUpperCase());
       reveal.append(newChip);
     })
     card.append(cardImage,content,action,reveal)
@@ -139,12 +141,72 @@ function makeCards(){
   wholeContainer.append(allCards);
   location.append(wholeContainer);
 }
-/* function makeSkills(){
-  const skills = {
-    title:"JavaScript",
-    image:"images/javascript-736400.png"
-  }
-  skills.map(() => {
+function makeSkills(){
+  const skills = [
+    {
+      title: "HTML",
+      image: "./images/html5.svg",
+      text: "HTML, The building essentials of all WebSites"
+    },
+    {
+      title: "CSS",
+      image: "./images/css.svg",
+      text: "CSS, The look and feel of the Web"
+    },
+    {
+      title: "JAVASCRIPT",
+      image: "./images/javascript-736400.svg",
+      text: "JavaScript, How the web works and operates"
+    },
+    {
+      title: "REACT",
+      image: "./images/react.svg",
+      text: "REACT, A great to build an ever changing Website"
+    },
+    {
+      title: "BOOTSTRAP",
+      image: "./images/bootstrap-4.svg",
+      text: "BOOTSTRAP, A CSS framework from twitter designed for rapid Development"
+    },
+    {
+      title: "MATERIALIZE",
+      image: "./images/materializecss.svg",
+      text: "MATERIALIZE, A CSS framework from google designed for rapid Development"
+    },
+    {
+      title: "PHP",
+      image: "./images/php-1.svg",
+      text: "PHP, The backbone of a website for interaction with a backend server"
+    },
+    {
+      title: "MYSQL",
+      image: "./images/mysql.svg",
+      text: "MYSQL, The backend Database to hold and organize Informaition"
+    },
+    {
+      title: "GIT",
+      image: "./images/git-icon.svg",
+      text: "GIT, Version control to easily navigate through your project"
+    },
+    {
+      title: "JQUERY",
+      image: "./images/jquery-1.svg",
+      text: "JQUERY, Easy to use element selection and manipulation"
+    }
+  ]
+  console.log(skills);
+  let row = $('#skillsRow');
+  skills.map((value) => {
+    let newDiv = $('<div>').addClass('col s12 m4');
+    let newCard = $('<div>').addClass('card-panel transparent center');
+    let newSpan = $('<span>').addClass('white-text');
+    let newImg = $('<img>').addClass('skillsImage').attr('src',value.image);
+    let newh5 = $('<h5>').addClass('red-text').text(value.title);
+    let newP = $('<p>').text(value.text);
+    newSpan.append(newImg,newh5,newP);
+    newCard.append(newSpan);
+    newDiv.append(newCard)
+    row.append(newDiv);
 
   })
-} */
+}
