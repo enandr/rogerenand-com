@@ -119,17 +119,18 @@ function makeCards(){
       var actionLinkLive = $('<a>').addClass('center clickable white-text text-hover').text('Live').attr('href', value.link);
     }
     else {
-      actionLinkLive = $('<a>').addClass('center clickable white-text text-hover').text('Under Construction')
+      actionLinkLive = null;
+      // actionLinkLive = $('<a>').addClass('center clickable white-text text-hover').text('Under Construction')
     }
     action.append(actionLinkLive,actionLinkGit);
     let reveal = $('<div>').addClass('card-reveal grey darken-4');
-    let revealTitle = $('<span>').addClass('card-title red-text').text(value.name);
+    let revealTitle = $('<span>').addClass('card-title white-text').text(value.name);
     let revealIcon = $('<i>').addClass('material-icons right').text('close');
-    let revealP = $('<p>').addClass('red-text').text(value.description);
+    let revealP = $('<p>').addClass('white-text').text(value.description);
     revealTitle.append(revealIcon)
     reveal.append(revealTitle,revealP)
     value.tags.map(value => {
-      let newChip = $('<div>').addClass('chip grey darken-3 red-text flow-text').text(value.toUpperCase());
+      let newChip = $('<div>').addClass('chip grey darken-3 white-text flow-text').text(value.toUpperCase());
       reveal.append(newChip);
     })
     card.append(cardImage,content,action,reveal)
