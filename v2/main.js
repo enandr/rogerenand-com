@@ -15,14 +15,14 @@ M.Modal.init(modal1, {
 const scrollspy = document.querySelectorAll('.scrollspy');
 M.ScrollSpy.init(scrollspy, {
 })
-/* $(window).scroll(() => {
-  if ($(window).scrollTop()>$(window).height()){
-    $('#navBar').removeClass('navbar-fixed');
+$(window).scroll(() => {
+  if ($(window).scrollTop()<$(window).height()){
+    $('#navBar').removeClass('navbar-fixed locationTop');
   }
   else {
-    $('#navBar').addClass('navbar-fixed');
+    $('#navBar').addClass('navbar-fixed locationTop');
   }
-}) */
+})
 makeCards();
 function makeCards(){
   const location = $('#work');
