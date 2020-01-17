@@ -77,7 +77,7 @@ function makeCards(){
         image: 'lightningSales.png',
         gitLink: 'https://github.com/enandr/wicked-sales',
         link: 'https://wickedsales.rogerenand.com'
-      },
+      }/* ,
       {
         name: 'Whiteboard Wizards',
         tags: [
@@ -90,7 +90,7 @@ function makeCards(){
         image: 'binary-code-475664_1920.jpg',
         gitLink: '',
         link: ''
-      }
+      } */
     ]
   let wholeContainer = $('<div>').addClass('container');
   let allCards = $('<div>').addClass('row');
