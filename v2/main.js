@@ -15,16 +15,22 @@ M.Modal.init(modal1, {
 const scrollspy = document.querySelectorAll('.scrollspy');
 M.ScrollSpy.init(scrollspy, {
 })
-$(window).scroll(() => {
-  if ($(window).scrollTop()<$(window).height()){
-    $('#navBar').removeClass('navbar-fixed locationTop');
-  }
-  else {
+
+  if ($(window).width()<=815){
     $('#navBar').addClass('navbar-fixed locationTop');
   }
-})
+  else {
+    $(window).scroll(() => {
+      if ($(window).scrollTop()<$(window).height()){
+        $('#navBar').removeClass('navbar-fixed locationTop');
+      }
+      else {
+        $('#navBar').addClass('navbar-fixed locationTop');
+      }
+    })
+  }
+
 makeCards();
-makeSkills();
 function makeCards(){
   const location = $('#work');
   const projects =
@@ -117,7 +123,7 @@ function makeCards(){
       actionLinkGit = null;
     }
     if (value.link) {
-      var actionLinkLive = $('<a>').addClass('center clickable white-text text-hover').text('Live').attr('href', value.link);
+      var actionLinkLive = $('<a>').addClass('center clickable white-text text-hover').text('Live').attr('href', value.link).attr('target', "_blank");
     }
     else {
       actionLinkLive = null;
@@ -141,72 +147,6 @@ function makeCards(){
   wholeContainer.append(allCards);
   location.append(wholeContainer);
 }
-function makeSkills(){
-  const skills = [
-    {
-      title: "HTML",
-      image: "./images/html5.svg",
-      text: "HTML, The building essentials of all WebSites"
-    },
-    {
-      title: "CSS",
-      image: "./images/css.svg",
-      text: "CSS, The look and feel of the Web"
-    },
-    {
-      title: "JAVASCRIPT",
-      image: "./images/javascript-736400.svg",
-      text: "JavaScript, How the web works and operates"
-    },
-    {
-      title: "REACT",
-      image: "./images/react.svg",
-      text: "REACT, A great to build an ever changing Website"
-    },
-    {
-      title: "BOOTSTRAP",
-      image: "./images/bootstrap-4.svg",
-      text: "BOOTSTRAP, A CSS framework from twitter designed for rapid Development"
-    },
-    {
-      title: "MATERIALIZE",
-      image: "./images/materializecss.svg",
-      text: "MATERIALIZE, A CSS framework from google designed for rapid Development"
-    },
-    {
-      title: "PHP",
-      image: "./images/php-1.svg",
-      text: "PHP, The backbone of a website for interaction with a backend server"
-    },
-    {
-      title: "MYSQL",
-      image: "./images/mysql.svg",
-      text: "MYSQL, The backend Database to hold and organize Informaition"
-    },
-    {
-      title: "GIT",
-      image: "./images/git-icon.svg",
-      text: "GIT, Version control to easily navigate through your project"
-    },
-    {
-      title: "JQUERY",
-      image: "./images/jquery-1.svg",
-      text: "JQUERY, Easy to use element selection and manipulation"
-    }
-  ]
-  console.log(skills);
-  let row = $('#skillsRow');
-  skills.map((value) => {
-    let newDiv = $('<div>').addClass('col s12 m4');
-    let newCard = $('<div>').addClass('card-panel transparent center');
-    let newSpan = $('<span>').addClass('white-text');
-    let newImg = $('<img>').addClass('skillsImage').attr('src',value.image);
-    let newh5 = $('<h5>').addClass('red-text').text(value.title);
-    let newP = $('<p>').text(value.text);
-    newSpan.append(newImg,newh5,newP);
-    newCard.append(newSpan);
-    newDiv.append(newCard)
-    row.append(newDiv);
+if (window.width<=815){
 
-  })
 }
