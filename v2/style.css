@@ -88,6 +88,9 @@ body{
   right: 15px;
   font-size: 30px;
 }
+.modalLink:hover{
+  color: lightblue;
+}
 ::-webkit-scrollbar{
   background-color: transparent;
   width:10px;
