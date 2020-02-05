@@ -83,11 +83,11 @@ body{
 }
 ::-webkit-scrollbar{
   background-color: transparent;
+  width:10px;
 }
 ::-webkit-scrollbar-thumb{
   background-color: darkred;
   border-radius: 15px;
-  width:5px;
 }
 @media (max-width: 450px) and (orientation: portrait) {
 .skillsImage{
