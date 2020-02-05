@@ -49,6 +49,9 @@ body{
 .f30{
   font-size: 30px;
 }
+.noScroll{
+  overflow: hidden;
+}
 .vh100{
   height:100vh;
 }
