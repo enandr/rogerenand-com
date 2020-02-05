@@ -39,8 +39,8 @@ body{
   cursor: pointer;
 }
 .skillsImage{
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
 }
 .locationTop{
   top:0;
@@ -80,4 +80,18 @@ body{
 }
 .active{
   color:red;
+}
+::-webkit-scrollbar{
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+  background-color: darkred;
+  border-radius: 15px;
+  width:5px;
+}
+@media (max-width: 450px) and (orientation: portrait) {
+.skillsImage{
+  height: 100px;
+  width: 100px;
+}
 }
