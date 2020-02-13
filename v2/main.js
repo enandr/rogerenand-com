@@ -35,7 +35,7 @@ function makeCards(){
   const location = $('#work');
   const projects =
     [
-      {
+      /* {
         name: 'SI/GO',
         tags: [
           'javascript',
@@ -59,7 +59,7 @@ function makeCards(){
         image: 'openTicket.png',
         gitLink: 'https://github.com/enandr/open-ticket',
         link: 'https://openticket.rogerenand.com'
-      },
+      }, */
       {
         name: 'Memory Match',
         tags: [
